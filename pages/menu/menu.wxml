@@ -1,0 +1,11 @@
+<!--pages/menu/menu.wxml-->
+<view>
+  <image src='../../static/imgs/Ripple-2.3s-200px.svg' class='loading' wx:if="{{isLoading}}"></image>
+  <view wx:else>
+    <view wx:for="{{menuList}}" wx:key="{{index}}">
+      <navigator url="{{'/pages/readContent/readContent?id=' + item._id + '&bookId=' + bookId }}" class='list'>
+      {{item.title}}
+    </navigator>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,65 @@
+<!--index.wxml-->
+<view>
+
+
+
+
+
+  <view class='container index'>
+    <image src='../../static/imgs/Ripple-2.3s-200px.svg' class='loading' wx:if="{{isLoading}}"></image>
+    <view wx:else>
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+
+        <block wx:for="{{swiperData}}" wx:key="{{index}}">
+          <swiper-item bindtap="jump" data-id="{{item.book._id}}">
+            <image src="{{item.img}}" class="slide-image" />
+          </swiper-item>
+        </block>
+
+      </swiper>
+      <view class='main-content'>
+
+        <view class='content-item' wx:for="{{mainContent}}" wx:key="{{index}}" >
+
+          <view class='title'>
+            <text>{{item.title}}</text>
+          </view>
+          <view class='content' wx:for="{{item.books}}"  bindtap="jump" data-id="{{bookitem._id}}" wx:for-item="bookitem" wx:for-index="bookindex">
+            <view class='box-l'>
+              <image src='{{bookitem.img}}' class='image'></image>
+            </view>
+            <view class='box-r'>
+
+              <view>
+                <view class='book-title'>{{bookitem.title}}</view>
+                <view class='book-desc'>{{bookitem.desc}}</view>
+              </view>
+
+              <view class='author'>
+                <text class='book-name'>{{bookitem.author}}</text>
+                <view class='author-r'>
+                  <!-- <text class='update-time'>两天前</text> -->
+                  <text class='fenlei'>{{item.title}}</text>
+                  <text class='many'>{{bookitem.looknums}}人在看</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 加载动画 -->
+  <view wx:if="{{!isLoading}}">
+    <view class='loading-more' wx:if="{{hasMore}}">
+      <image src='/static/imgs/loadingmore.svg' class='loading-img'></image>
+      <text>正在拼命加载中</text>
+    </view>
+    <view class='no-more' wx:else>
+      <text class='no-more-text'>我是有底线的</text>
+      <text class='line'></text>
+    </view>
+  </view>
+
+</view>

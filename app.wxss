@@ -1,0 +1,6 @@
+/**app.wxss**/
+@import "./static/iconfont/iconfont.wxss";
+.container {
+  padding: 0 20rpx;
+  
+} 

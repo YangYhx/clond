@@ -1,0 +1,28 @@
+<!--pages/readContent/readContent.wxml-->
+
+<view>
+  <image src='../../static/imgs/Ripple-2.3s-200px.svg' class='loading' wx:if="{{isLoading}}"></image>
+  <view wx:else class='wemark-wrap' style="{{'font-size:'+font+'rpx'}}">
+    <view class='readcontent' >
+      <wemark md="{{article}}"  highlight type="wemark"></wemark>
+    </view>
+    <scroll-view scroll-y class="catalog-menu {{isShow ? 'active':''}}" >
+      <view class='catalog-item' wx:for="{{catalog}}" wx:key="{{index}}" bindtap='handleGet' data-id='{{item._id}}'>
+        {{item.title}}
+      </view>
+    </scroll-view>
+
+    <view class='mask' wx:if='{{isShow}}' bindtap='toggleCatalog'>
+    </view>
+
+
+    <view class='menu'>
+      <view class='iconfont icon-lishifanyeim' bindtap='articleback'></view>
+      <view class='iconfont icon-mulu' bindtap="toggleCatalog"></view>
+      <view class='iconfont icon-yueduye_zitizengda' bindtap='handleAdd'></view>
+      <view class='iconfont icon-yueduye_zitijianxiao' bindtap='handleReduce'></view>
+      <view class='iconfont icon-lishifanyeim1' bindtap='articleNext'></view>
+    </view>
+  </view>
+
+</view>

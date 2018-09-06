@@ -1,0 +1,45 @@
+<!--pages/detail/detail.wxml-->
+<view class='wrap'>
+  <image src='../../static/imgs/Ripple-2.3s-200px.svg' class='loading' wx:if="{{isLoading}}"></image>
+  <view wx:else>
+    <view class='first_content'>
+      <view>
+        <image src='{{bookContent.data.img}}' class='image-detail'></image>
+      </view>
+      <view class='main-content'>
+        <view>
+          <view class='title'>{{bookContent.data.title}}</view>
+        </view>
+        <view class='content-d'>
+          <view class='book-name'>作者：{{bookContent.data.author}}</view>
+          <view class='book-looknums'>{{bookContent.data.looknums}}人在看</view>
+          <view class='book-likenums'>{{bookContent.data.startsnums}}人喜欢 </view>
+        </view>
+
+      </view>
+    </view>
+    <view class='second_content'>
+      <button bindtap='hendleCollect'>
+      {{bookContent.isCollect == 0 ? '收藏' : '已收藏'}}
+      </button>
+      <button open-type="share">分享好友</button>
+    </view>
+    <view class="third_content">
+      <view class="dis">简介</view>
+      <view class="book-content">{{bookContent.data.desc}}</view>
+    </view>
+    <view class='four_content'>
+      <view class='four_r'>
+        <text class='menu' bindtap='jumpRead' data-id='{{bookContent.data._id}}'>查看目录</text>
+        <text class='catalag'>一共{{bookContent.length}}章</text>
+      </view>
+      <view class='four_l'>
+        <text>更新于{{bookContent.data.updateTime}}</text>
+      </view>
+    </view>
+    <view class='fifth_content'>
+      <button bindtap='jumpRead' data-id='{{bookContent.data._id}}'>阅读书籍</button>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,84 @@
+/* pages/detail/detail.wxss */
+.wrap{
+  padding: 20rpx;
+}
+.first_content{
+  display: flex;
+  justify-content: space-between;
+}
+.first_content .image-detail{
+  width: 270rpx;
+  height: 330rpx;
+}
+.first_content .main-content{
+  padding: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.first_content .title{
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 30rpx;
+  height: 30rpx;
+}
+.first_content .content-d{
+   font-size: 12px;
+   line-height: 2;
+}
+.second_content{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 5px solid #f1f1f1;
+}
+.second_content button{
+  margin: 40rpx 0;
+  width: 300rpx;
+  border: 1px solid #a72424;
+  background-color: #fff;
+  color: #000;
+  font-size: 12px;
+}
+.third_content{
+  border-bottom: 2px solid #f1f1f1;
+}
+.third_content.dis{
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 30rpx;
+}
+.third_content .book-content{
+  font-size: 12px;
+  color: #333;
+  margin-top: 50rpx;
+  padding-bottom: 30rpx;
+}
+.four_content{
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 100rpx;
+  border-bottom: 5px solid #f1f1f1;
+}
+.four_content .four_r .menu{
+  font-weight: bold;
+  margin-right: 20rpx;
+}
+.fifth_content button{
+  margin: 20rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: blue;
+  color: #fff;
+  font-size: 14px;
+}
+
+.loading{
+position: absolute;
+top:50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}

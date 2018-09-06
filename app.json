@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/menu/menu",
+    "pages/readContent/readContent",
+    "pages/record/record",
+    "pages/person/person"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#8A2BE2",
+    "navigationBarTitleText": "云书",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/imgs/首页.png",
+        "selectedIconPath": "/static/imgs/首页_2.png"
+      },
+      {
+        "pagePath": "pages/record/record",
+        "text": "学习记录",
+        "iconPath": "/static/imgs/学习.png",
+        "selectedIconPath": "/static/imgs/学习_2.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "个人中心",
+        "iconPath": "/static/imgs/个人中心_1.png",
+        "selectedIconPath": "/static/imgs/个人中心_2.png"
+      }
+    ],
+    "selectedColor":"#333333",
+    "backgroundColor": "#8A2BE2"
+  }
+}
